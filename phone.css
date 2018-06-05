@@ -1,0 +1,51 @@
+.phone{
+	width: 300px;
+	height: 520px;
+	border:2px #606060 solid;
+	margin: auto auto;
+	border-radius: 25px;
+	background-color: black;
+}
+.top{
+	width: 250px;
+	height: 30px;
+	margin: 8px auto;
+}
+.screen{
+	width: 280px;
+	height: 420px;
+	background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528205722724&di=4b8bf151627fcc35c37d0fa35cfb3cef&imgtype=0&src=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fitem%2F201608%2F30%2F20160830143151_5jdhS.thumb.700_0.png");
+	margin: 0px auto;
+	background-size: cover;
+}
+.home{
+	width: 50px;
+	height: 35px;
+	border:2px #606060 solid;
+	border-radius: 20px;
+	margin:5px auto;
+}
+.listen{
+	width: 120px;
+	height: 4px;	
+	border:2px #606060 solid;
+	border-radius: 4px;
+	margin: 10px 30px;
+	float: left;
+}
+.see1{
+	width: 5px;
+	height: 5px;
+	border:2px #606060 solid;
+	float: left;
+	border-radius: 50%;
+	margin: 10px 2px;
+}
+.see2{
+	width: 5px;
+	height: 5px;
+	border:2px #606060 solid;
+	float: left;
+	border-radius: 50%;
+	margin: 10px 2px;
+}
