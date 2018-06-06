@@ -1,30 +1,17 @@
+
+body{
+    margin: 0;
+}
 .div1{
 	width:auto;
 	height:850px;
-	margin: 40px;
-	background-size:120%;
+	
 	background:url("back.jpg");
 	background-repeat: no-repeat;
+    margin: 0 40px;
 }
-.github{
-	width: 65px;
-    background-color: #e20e0e87;
-    margin: 20px;
-    padding: 39px 16px;
-    border-radius: 20px;
-    float: left;
-}
-.phone{
-	width: 75px;
-    background-color: #33d2a187;
-    margin: 20px;
-    padding: 39px 10px;
-    border-radius: 20px;
-    float: left;
-}
-.angle{
-	width: 65px;
-    background-color:#e4a9a9c2;
+.public{
+    width: 65px;
     margin: 20px;
     padding: 39px 16px;
     border-radius: 20px;
