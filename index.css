@@ -1,158 +1,247 @@
-
-body {
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', arial, sans-serif;
 }
-
-.div1 {
+li{
+    list-style: none;
+}
+.top{
     width: 100%;
-    height: 850px;
-    z-index: 20;
-    background: url("back.jpg") no-repeat;
-    position: relative;
+    height: 2px;
+    background:#11767799;
+    transition: all 1s;
+}
+.top:hover{
+    transform: scaleY(40);
+}
+.all{
+    width: 99%;
+    background: #f2f2f2;
+    margin: 0 6px;
+    color: white;
+}
+.first{
+    float: left;
+    width: 66.66666667%;
+    height: 100vh;
+    padding-top: 200px;
+    background: url("images/banner-bg.png") no-repeat center center/cover;
+    text-align: center;
+    font-weight: 300;
+
+}
+.first i{
+    font-size: 40px;
+    line-height: 55px;
+    transition: all 1s;
+}
+.first i:hover{
+        font-size: 55px;
+}
+.first li{
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: lighter;
+}
+.first .haha{
+    font-size: 13px;
+    line-height: 40px;
+}
+.first .haha:hover{
+    font-size: 55px;
+}
+.second{
+    float: right;
+    width: 32.7%;
+    height: 100vh;
+    padding-top: 40px;
+    text-align: center;
+    transition: all 0.8s;
+    background: #f4bc51;
+}
+.second img{
+    display: block;
+    width: 150px;
+    height: 137px;
+    margin: 0 auto;
+    transition: all 1s;
+}
+.second:hover img{
+    transform:rotateY(360deg) ;
 }
 
-.public {
-    z-index: 100;
-    width: 65px;
-    margin: 20px;
-    padding: 39px 16px;
-    border-radius: 20px;
+.second .area{
+    line-height: 60px;
+    display: block;
+    border-bottom: 1px solid #ffffff;
+}
+.second ul{
+    padding-top: 20px;
+}
+.second .under{
+    width: 70%;
+    height: 20px;
+    margin: 30px auto 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.second .under .icon-shouye{
+    color: #f4bc51;
+}
+.second .under .icon-qq{
+    color: #f4bc51;
+}
+.second .under .icon-weibo{
+    color: #f4bc51;
+}
+.second .under .icon-wechat{
+    color: #f4bc51;
+}
+.second .under li{
+
+    width: 20px;
+    height: 20px;
+border-radius: 50%;
+    background: white;
+    transition: all 1s;
+}
+.second .under li:hover{
+    background: #d59b2b;
+}
+
+.third{
+
+    width: 100%;
+    height:300px;
+
+    background: #b2505f77 ;
+}
+.back{
+    margin-top: 6px;
+    float: left;
+    width: 32%;
+    min-height: 300px;
+    background:url("images/house.jpg") no-repeat center center/100% auto;
+}
+.third li{
+    width: 180%;
+    font-size: 20px;
+    font-weight: 200;
+}
+.third .rain{
+    width: 4px;
+    height: 8px;
+    border-radius: 4px;
+
+    transform:translateX(10px) translateY(-32px) skewY(-45deg);
+    background: #007aff33;
     float: left;
 }
-
-.spider-man {
-    width: 175px;
-    height: 163px;
-    background-image: url(sbadou.png);
-    position: absolute;
-    right: 0;
-    top: 60px;
-    z-index: -100;
-}
-
-.spider-man-under {
-    width: 579px;
-    height: 515px;
-    background-image: url(sbd.png);
-    margin: -20px auto 0 auto;
-
-}
-
-.iron-man {
-    width: 208px;
-    height: 213px;
-    background-image: url(true.png);
-    position: absolute;
-    top: 350px;
-    left: 300px;
-    z-index: 100;
-}
-
-.captain-america {
-    width: 254px;
-    height: 388px;
-    background-image: url(amcman.png);
-    position: absolute;
-    bottom: -40px;
-    left: 380px;
-    z-index: 100;
-}
-
-.green-man {
-    width: 400px;
-    height: 500px;
-    background-image: url(greenman.png);
-    background-size: cover;
-    position: absolute;
-    bottom: 0;
-    left: -20px;
-    z-index: 20;
-}
-
-.ant-man {
-    width: 50px;
-    height: 50px;
-    background: url(littleman.png);
-    background-size: cover;
-    position: absolute;
-    top:-30px;
-    left: 100px;
-    z-index: 200;
-}
-
-.thor {
-     width: 254px;
-     height: 339px;
-     background-image: url(leishen.png);
-     position: absolute;
-     bottom: 0;
-     left: 210px;
-    z-index: 110;
+.third .left .rain:nth-child(1),.rain:nth-child(9),.rain:nth-child(20),.rain:nth-child(31){
+    animation: rain 0.55s ease-in infinite 2s;
  }
-.fly-man {
-    width: 254px;
-    height: 300px;
-    background-image: url(flyman.png);
-    position: absolute;
-    bottom: 350px;
-    left: 30px;
+.third .left .rain:nth-child(5),.rain:nth-child(16),.rain:nth-child(27),.rain:nth-child(38),.rain:nth-child(45){
+    animation: rain 0.35s linear infinite ;
 }
-.black-man {
-    width: 254px;
-    height: 380px;
-    background-image: url(blackman.png);
-    position: absolute;
-    bottom: -30px;
-    left:600px;
+.third .left .rain:nth-child(7),.rain:nth-child(17),.rain:nth-child(28),.rain:nth-child(37){
+    animation: rain 0.65s ease-in infinite 0.3s;
 }
-.red-man {
-    width: 400px;
-    height: 500px;
-    background-image: url(haoke.png);
-    background-size: cover;
-    position: absolute;
-    bottom: -10px;
-    right: 0;
-    z-index: -10;
+.third .left .rain:nth-child(3),.rain:nth-child(15),.rain:nth-child(26),.rain:nth-child(39){
+    animation: rain 0.85s ease-in infinite ;
 }
-.yingyan {
-    width: 239px;
-    height: 336px;
-    background-image: url(yingyan.png);
-    background-size: cover;
-    position: absolute;
-    bottom: 400px;
-    right: 10px;
-    z-index: -20;
+.third .left .rain:nth-child(8),.rain:nth-child(19),.rain:nth-child(29),.rain:nth-child(33),.rain:nth-child(44){
+    animation: rain 0.38s ease-in infinite 0.2s;
 }
-.seeman{
-    width: 320px;
-    height: 388px;
-    background-image: url(seeman.png);
-    position: absolute;
-    bottom: 300px;
-    right: 180px;
-    z-index: 80;
-    background-size: cover;
+.third .left .rain:nth-child(2),.rain:nth-child(6),.rain:nth-child(21),.rain:nth-child(32),.rain:nth-child(42){
+    animation: rain 0.6s ease-in infinite 0.15s;
 }
-.redwoman{
-    width: 290px;
-    height: 388px;
-    background-image: url(redwoman.png);
-    position: absolute;
-    bottom: -20px;
-    right: 200px;
-    z-index: 90;
-    background-size: cover;
+.third .left .rain:nth-child(4),.rain:nth-child(10),.rain:nth-child(22),.rain:nth-child(34),.rain:nth-child(48){
+    animation: rain 0.58s linear infinite;
 }
-.blackwoman{
-    width: 230px;
-    height: 210px;
-    background-image: url(blackwoman.png);
-    background-size: cover;
-    position: absolute;
-    top: 380px;
-    left: 200px;
-    z-index: 90;
+.third .left .rain:nth-child(11),.rain:nth-child(14),.rain:nth-child(23),.rain:nth-child(35),.rain:nth-child(47){
+    animation: rain 0.65s linear infinite;
+}
+.third .left .rain:nth-child(12),.rain:nth-child(18),.rain:nth-child(24),.rain:nth-child(36),.rain:nth-child(43){
+    animation: rain 0.85s ease-in infinite;
+}
+.third .left .rain:nth-child(13),.rain:nth-child(25),.rain:nth-child(30),.rain:nth-child(41),.rain:nth-child(46){
+    animation: rain 0.5s ease-in infinite 1s;
+}
+.third .right .rain:nth-child(1),.rain:nth-child(9),.rain:nth-child(20),.rain:nth-child(31){
+    animation: rain 1s ease-in infinite;
+}
+.third .right .rain:nth-child(5),.rain:nth-child(16),.rain:nth-child(27),.rain:nth-child(38),.rain:nth-child(45){
+    animation: rain 0.8s ease-in infinite 0.3s;
+}
+.third .right .rain:nth-child(7),.rain:nth-child(17),.rain:nth-child(28),.rain:nth-child(37){
+    animation: rain 0.9s ease-in infinite 0.1s;
+}
+.third .right .rain:nth-child(3),.rain:nth-child(15),.rain:nth-child(26),.rain:nth-child(39){
+    animation: rain 0.9s ease-in infinite 0.2s;
+}
+.third .right .rain:nth-child(8),.rain:nth-child(19),.rain:nth-child(29),.rain:nth-child(33),.rain:nth-child(44){
+    animation: rain 0.65s ease-in infinite 0.15s;
+}
+.third .right .rain:nth-child(2),.rain:nth-child(6),.rain:nth-child(21),.rain:nth-child(32),.rain:nth-child(42){
+    animation: rain 0.6s ease-in infinite;
+}
+.third .right .rain:nth-child(4),.rain:nth-child(10),.rain:nth-child(22),.rain:nth-child(34),.rain:nth-child(48){
+    animation: rain 0.5s ease-in infinite;
+}
+.third .right .rain:nth-child(11),.rain:nth-child(14),.rain:nth-child(23),.rain:nth-child(35),.rain:nth-child(47){
+    animation: rain 0.9s ease-in infinite;
+}
+.third .right .rain:nth-child(12),.rain:nth-child(18),.rain:nth-child(24),.rain:nth-child(36),.rain:nth-child(43){
+    animation: rain 0.4s ease-in infinite;
+}
+.third .right .rain:nth-child(13),.rain:nth-child(25) .rain:nth-child(30),.rain:nth-child(41),.rain:nth-child(46){
+    animation: rain 0.7s ease-in infinite;
+}
+
+
+.third:hover li{
+    animation: tranlate 3s linear infinite;
+}
+@keyframes rain {
+        from{
+            transform: translateY(-20px);
+        }
+        to{
+            transform: translateY( 260px) translateX(-20px);
+        }
+}
+@keyframes tranlate {
+        from{
+            margin-left:100%;
+        }
+    to{
+        margin-left: -180%;
+    }
+}
+.fourth{
+    float:right;
+    width: 67%;
+    height:300px;
+    margin-top: 6px;
+    background: url("images/events-bg.png") no-repeat center center/cover;
+}
+@media (max-width:500px) {
+    .first{
+        width: 100%;
+        padding-top: 300px;
+    }
+    .second{
+        width: 100%;
+        height: 400px;
+        margin-top: 6px;
+    }
+    .back{
+        width: 100%;
+    }
+    .fourth{
+        width: 100%;
+    }
 }
