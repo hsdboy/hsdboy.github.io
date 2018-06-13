@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', arial, sans-serif;
+    text-decoration: none;
 }
 li{
     list-style: none;
@@ -12,9 +13,30 @@ li{
     height: 2px;
     background:#11767799;
     transition: all 1s;
+    text-align: center;
 }
 .top:hover{
     transform: scaleY(40);
+}
+.top .xun{
+    width: 60px;
+    height: 100%;
+    background: #117677bb;
+    transition: all 0.5s;
+    float: left;
+}
+.top .cai{
+    width: 60px;
+    height: 100%;
+    background: #117677bb;
+    transition: all 0.5s;
+    float: right;
+}
+.top .xun:hover{
+    transform: scaleY(8);
+}
+.top .cai:hover{
+    transform: scaleY(8);
 }
 .all{
     width: 99%;
