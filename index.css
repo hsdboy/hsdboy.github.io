@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0;
     padding: 0;
@@ -5,77 +7,94 @@
     font-family: 'Open Sans', arial, sans-serif;
     text-decoration: none;
 }
-li{
+
+li {
     list-style: none;
 }
-.top{
+
+.top {
     width: 100%;
     height: 2px;
-    background:#11767799;
+    background: #11767799;
     transition: all 1s;
     text-align: center;
 }
-.top:hover{
+
+.top:hover {
     transform: scaleY(40);
 }
-.top .xun{
+
+.top .xun {
     width: 60px;
     height: 100%;
     background: #117677bb;
     transition: all 0.5s;
     float: left;
 }
-.top .cai{
+
+.top .cai {
     width: 60px;
     height: 100%;
     background: #117677bb;
     transition: all 0.5s;
     float: right;
 }
-.top .xun:hover{
+
+.top .xun:hover {
     transform: scaleY(8);
 }
-.top .cai:hover{
+
+.top .cai:hover {
     transform: scaleY(8);
 }
-.all{
+
+.all {
     width: 99%;
     background: #f2f2f2;
     margin: 0 6px;
     color: white;
+    display: flex;
+    flex-flow: wrap;
+
 }
-.first{
+
+.first {
     float: left;
     width: 66.66666667%;
     height: 100vh;
-    padding-top: 200px;
+    padding-top: 284px;
     background: url("images/banner-bg.png") no-repeat center center/cover;
     text-align: center;
     font-weight: 300;
-
 }
-.first i{
+
+.first i {
     font-size: 40px;
     line-height: 55px;
     transition: all 1s;
 }
-.first i:hover{
-        font-size: 55px;
+
+.first i:hover {
+    font-size: 70px;
+    color: chartreuse;
 }
-.first li{
+
+.first li {
     font-size: 50px;
     line-height: 60px;
     font-weight: lighter;
 }
-.first .haha{
+
+.first .haha {
     font-size: 13px;
     line-height: 40px;
 }
-.first .haha:hover{
+
+.first .haha:hover {
     font-size: 55px;
 }
-.second{
-    float: right;
+
+.second {
     width: 32.7%;
     height: 100vh;
     padding-top: 40px;
@@ -83,26 +102,30 @@ li{
     transition: all 0.8s;
     background: #f4bc51;
 }
-.second img{
+
+.second img {
     display: block;
     width: 150px;
     height: 137px;
     margin: 0 auto;
     transition: all 1s;
 }
-.second:hover img{
-    transform:rotateY(360deg) ;
+
+.second:hover img {
+    transform: rotateY(360deg);
 }
 
-.second .area{
+.second .area {
     line-height: 60px;
     display: block;
     border-bottom: 1px solid #ffffff;
 }
-.second ul{
+
+.second ul {
     padding-top: 20px;
 }
-.second .under{
+
+.second .under {
     width: 70%;
     height: 20px;
     margin: 30px auto 0 auto;
@@ -110,160 +133,186 @@ li{
     justify-content: space-around;
 }
 
-.second .under .icon-shouye{
+.second .under .icon-shouye {
     color: #f4bc51;
 }
-.second .under .icon-qq{
+
+.second .under .icon-qq {
     color: #f4bc51;
 }
-.second .under .icon-weibo{
+
+.second .under .icon-weibo {
     color: #f4bc51;
 }
-.second .under .icon-wechat{
+
+.second .under .icon-wechat {
     color: #f4bc51;
 }
-.second .under li{
+
+.second .under li {
 
     width: 20px;
     height: 20px;
-border-radius: 50%;
+    border-radius: 50%;
     background: white;
     transition: all 1s;
 }
-.second .under li:hover{
+
+.second .under li:hover {
     background: #d59b2b;
 }
 
-.third{
-
+.third {
     width: 100%;
-    height:300px;
+    height: 484px;
+    overflow: hidden;
+    transition: all 5s;
 
-    background: #b2505f77 ;
 }
-.back{
+
+.back {
     margin-top: 6px;
     float: left;
     width: 32%;
     min-height: 300px;
-    background:url("images/house.jpg") no-repeat center center/100% auto;
+    background: url("images/house.jpg") no-repeat center center/100% auto;
 }
-.third li{
-    width: 180%;
+
+.third li {
+    width: 100%;
     font-size: 20px;
     font-weight: 200;
+    transform: translateX(100%);
 }
-.third .rain{
-    width: 4px;
-    height: 8px;
-    border-radius: 4px;
 
-    transform:translateX(10px) translateY(-32px) skewY(-45deg);
+.third:hover {
+    background: rgba(170, 134, 178, 0.57);
+}
+
+.third:hover li {
+    animation: tranlate 4s ease-out infinite;
+}
+
+.third .rain {
+    width: 5px;
+    height: 40px;
+    border-radius: 4px;
+    transform: translateX(10px) translateY(-110px) skewY(-45deg);
     background: #007aff33;
     float: left;
 }
-.third .left .rain:nth-child(1),.rain:nth-child(9),.rain:nth-child(20),.rain:nth-child(31){
-    animation: rain 0.55s ease-in infinite 2s;
- }
-.third .left .rain:nth-child(5),.rain:nth-child(16),.rain:nth-child(27),.rain:nth-child(38),.rain:nth-child(45){
-    animation: rain 0.35s linear infinite ;
+
+.third:hover .rain:nth-child(9n) {
+    animation: rain 0.3s ease-in infinite;
 }
-.third .left .rain:nth-child(7),.rain:nth-child(17),.rain:nth-child(28),.rain:nth-child(37){
-    animation: rain 0.65s ease-in infinite 0.3s;
-}
-.third .left .rain:nth-child(3),.rain:nth-child(15),.rain:nth-child(26),.rain:nth-child(39){
-    animation: rain 0.85s ease-in infinite ;
-}
-.third .left .rain:nth-child(8),.rain:nth-child(19),.rain:nth-child(29),.rain:nth-child(33),.rain:nth-child(44){
-    animation: rain 0.38s ease-in infinite 0.2s;
-}
-.third .left .rain:nth-child(2),.rain:nth-child(6),.rain:nth-child(21),.rain:nth-child(32),.rain:nth-child(42){
-    animation: rain 0.6s ease-in infinite 0.15s;
-}
-.third .left .rain:nth-child(4),.rain:nth-child(10),.rain:nth-child(22),.rain:nth-child(34),.rain:nth-child(48){
-    animation: rain 0.58s linear infinite;
-}
-.third .left .rain:nth-child(11),.rain:nth-child(14),.rain:nth-child(23),.rain:nth-child(35),.rain:nth-child(47){
-    animation: rain 0.65s linear infinite;
-}
-.third .left .rain:nth-child(12),.rain:nth-child(18),.rain:nth-child(24),.rain:nth-child(36),.rain:nth-child(43){
-    animation: rain 0.85s ease-in infinite;
-}
-.third .left .rain:nth-child(13),.rain:nth-child(25),.rain:nth-child(30),.rain:nth-child(41),.rain:nth-child(46){
-    animation: rain 0.5s ease-in infinite 1s;
-}
-.third .right .rain:nth-child(1),.rain:nth-child(9),.rain:nth-child(20),.rain:nth-child(31){
-    animation: rain 1s ease-in infinite;
-}
-.third .right .rain:nth-child(5),.rain:nth-child(16),.rain:nth-child(27),.rain:nth-child(38),.rain:nth-child(45){
-    animation: rain 0.8s ease-in infinite 0.3s;
-}
-.third .right .rain:nth-child(7),.rain:nth-child(17),.rain:nth-child(28),.rain:nth-child(37){
-    animation: rain 0.9s ease-in infinite 0.1s;
-}
-.third .right .rain:nth-child(3),.rain:nth-child(15),.rain:nth-child(26),.rain:nth-child(39){
-    animation: rain 0.9s ease-in infinite 0.2s;
-}
-.third .right .rain:nth-child(8),.rain:nth-child(19),.rain:nth-child(29),.rain:nth-child(33),.rain:nth-child(44){
-    animation: rain 0.65s ease-in infinite 0.15s;
-}
-.third .right .rain:nth-child(2),.rain:nth-child(6),.rain:nth-child(21),.rain:nth-child(32),.rain:nth-child(42){
-    animation: rain 0.6s ease-in infinite;
-}
-.third .right .rain:nth-child(4),.rain:nth-child(10),.rain:nth-child(22),.rain:nth-child(34),.rain:nth-child(48){
+
+.third:hover .rain:nth-child(9n-1) {
     animation: rain 0.5s ease-in infinite;
 }
-.third .right .rain:nth-child(11),.rain:nth-child(14),.rain:nth-child(23),.rain:nth-child(35),.rain:nth-child(47){
-    animation: rain 0.9s ease-in infinite;
-}
-.third .right .rain:nth-child(12),.rain:nth-child(18),.rain:nth-child(24),.rain:nth-child(36),.rain:nth-child(43){
-    animation: rain 0.4s ease-in infinite;
-}
-.third .right .rain:nth-child(13),.rain:nth-child(25) .rain:nth-child(30),.rain:nth-child(41),.rain:nth-child(46){
+
+.third:hover .rain:nth-child(9n-2) {
     animation: rain 0.7s ease-in infinite;
 }
 
+.third:hover .rain:nth-child(9n-3) {
+    animation: rain 0.9s ease-in infinite;
+}
 
-.third:hover li{
-    animation: tranlate 3s linear infinite;
+.third:hover .rain:nth-child(9n-4) {
+    animation: rain 0.35s ease-in infinite;
 }
+
+.third:hover .rain:nth-child(9n-5) {
+    animation: rain 0.55s ease-in infinite;
+}
+
+.third:hover .rain:nth-child(9n-6) {
+    animation: rain 0.75s ease-in infinite;
+}
+
+.third:hover .rain:nth-child(9n-7) {
+    animation: rain 0.95s ease-in infinite;
+}
+
+.third:hover .rain:nth-child(9n-8) {
+    animation: rain 0.4s ease-in infinite;
+}
+
 @keyframes rain {
-        from{
-            transform: translateY(-20px);
-        }
-        to{
-            transform: translateY( 260px) translateX(-20px);
-        }
-}
-@keyframes tranlate {
-        from{
-            margin-left:100%;
-        }
-    to{
-        margin-left: -180%;
+    from {
+        transform: translateY(-20px);
+    }
+    to {
+        transform: translateY(360px) translateX(-20px);
     }
 }
-.fourth{
-    float:right;
-    width: 67%;
-    height:300px;
-    margin-top: 6px;
-    background: url("images/events-bg.png") no-repeat center center/cover;
+
+@keyframes tranlate {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
-@media (max-width:500px) {
-    .first{
+
+.fourth {
+    width: 67%;
+    height: 484px;
+    margin-top: 6px;
+    color: rgba(255, 255, 255, 0);
+    background: url("images/events-bg.png") no-repeat center right/cover;
+}
+
+.fourth i {
+    transform: scaleZ(8);
+    transition: all 5s;
+}
+
+.fourth:hover i {
+    font-size: 40px;
+    color: #ffffff;
+    transform: translateX(50%) translateY(50%);
+}
+
+.fourth:hover{
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 500px) {
+    .first {
         width: 100%;
         padding-top: 300px;
     }
-    .second{
+
+    .second {
         width: 100%;
         height: 400px;
         margin-top: 6px;
     }
-    .back{
+
+    .back {
         width: 100%;
     }
-    .fourth{
+
+    .fourth {
         width: 100%;
     }
 }
