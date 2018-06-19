@@ -78,18 +78,19 @@ li {
 }
 
 .first i {
+    width: 50px;
+    height: 55px;
     display: block;
     float: left;
     font-size: 40px;
     line-height: 55px;
-    transform: translateY(0);
     transition: all 1s;
 }
 
 .first i:hover {
     font-size: 70px;
     color: chartreuse;
-    transform: translateY(-60px);
+    transform:  translateZ(100px) rotateY(360deg);
 }
 
 @keyframes left {
@@ -102,42 +103,43 @@ li {
 }
 
 .first li {
+
     color: white;
     font-size: 30px;
     line-height: 60px;
     font-weight: lighter;
 }
 
-.first li:nth-child(1) {
+.first:hover .welcome li:nth-child(1) {
     animation: color 4s infinite;
 }
 
-.first li:nth-child(2) {
+.first:hover .welcome li:nth-child(2) {
     animation: color 4s infinite;
     animation-delay: 0.5s;
 }
 
-.first li:nth-child(3) {
+.first:hover .welcome li:nth-child(3) {
     animation: color 4s infinite;
     animation-delay: 1s;
 }
 
-.first li:nth-child(4) {
+.first:hover .welcome li:nth-child(4) {
     animation: color 4s infinite;
     animation-delay: 1.5s;
 }
 
-.first li:nth-child(5) {
+.first:hover .welcome li:nth-child(5) {
     animation: color 4s infinite;
     animation-delay: 2s;
 }
 
-.first li:nth-child(6) {
+.first:hover .welcome li:nth-child(6) {
     animation: color 4s infinite;
     animation-delay: 2.5s;
 }
 
-.first li:nth-child(7) {
+.first:hover .welcome li:nth-child(7) {
     animation: color 4s infinite;
     animation-delay: 3s;
 }
@@ -375,17 +377,17 @@ li {
     from {
     }
     30% {
-        font-size: 60px;
+
         color: red;
     }
     60% {
-        font-size: 50px;
+
         color: blue;
     }
     to {
-        font-size: 40px;
+        font-size: 30px;
         color: #ffffff;
-        transform: rotateY(360deg);
+        transform: rotateY(360deg) translateZ(200px);
         position: absolute;
         left: 30px;
         top: 30px;
@@ -393,7 +395,7 @@ li {
 }
 
 .fourth:hover i {
-    animation: four-text 2s forwards;
+    animation: four-text 2s ease-out forwards;
 }
 
 .four-pic {
