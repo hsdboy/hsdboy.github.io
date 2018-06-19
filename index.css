@@ -13,7 +13,7 @@ li {
 
 .left{
     position: fixed;
-    top: -21%;
+    top: -18%;
     left: 20px;
     z-index: 1;
     transition: all 1s;
