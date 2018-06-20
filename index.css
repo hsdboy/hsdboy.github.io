@@ -11,7 +11,7 @@ li {
     list-style: none;
 }
 
-.left{
+.left {
     position: fixed;
     top: -18%;
     left: 20px;
@@ -19,28 +19,32 @@ li {
     transition: all 1s;
 
 }
-.work-are{
+
+.work-are {
     width: 150px;
     background: rgba(25, 35, 20, 0.63);
     padding-bottom: 20px;
 }
-.work-are a{
+
+.work-are a {
     line-height: 24px;
     display: block;
     text-align: center;
     color: rgba(255, 255, 255, 0.83);
     border-bottom: #f2f2f2 1px dashed;
 }
-.left:before{
+
+.left:before {
     content: "";
     width: 10px;
     height: 100px;
     position: absolute;
     left: 70px;
-    top:-100px;
+    top: -100px;
     background: rgba(25, 35, 20, 0.64);
 }
-.left:after{
+
+.left:after {
     width: 40px;
     height: 40px;
     border-radius: 20px;
@@ -50,7 +54,8 @@ li {
     bottom: -20px;
     background: rgba(25, 35, 20, 0.63);
 }
-.left:hover{
+
+.left:hover {
     border-radius: 20px;
     transform: translateY(150%);
 }
@@ -90,7 +95,7 @@ li {
 .first i:hover {
     font-size: 70px;
     color: chartreuse;
-    transform:  translateZ(100px) rotateY(360deg);
+    transform: translateZ(100px) rotateY(360deg);
 }
 
 @keyframes left {
@@ -369,10 +374,6 @@ li {
 
 }
 
-.box{
-    width: 33%;
-}
-
 @keyframes four-text {
     from {
     }
@@ -430,7 +431,8 @@ li {
         margin-left: 0;
     }
 }
-.bottom{
+
+.bottom {
     width: 98%;
     height: 50px;
     background: #f2f2f2;
@@ -441,69 +443,245 @@ li {
     text-decoration-line: line-through;
 }
 
-
-.box{
+.box {
     width: 33%;
     height: 400px;
     background: #192314;
     margin-top: 6px;
 }
-.demo{
+
+.demo {
     transform: rotateY(45deg) rotateX(45deg);
-    transform-style:preserve-3d ;
+    transform-style: preserve-3d;
     margin: 150px auto 150px auto;
     width: 100px;
     height: 100px;
 }
 
-
-.box:hover .demo{
+.box:hover .demo {
     animation: rotate 2s linear infinite;
 }
-@keyframes  rotate {
-    0%{
+
+@keyframes rotate {
+    0% {
         transform: rotateY(0) rotateX(0);
     }
-    100%{
+    100% {
         transform: rotateX(360deg) rotateY(360deg);
     }
 }
-.item{
+
+.item {
     width: 100px;
     height: 100px;
     position: absolute;
     left: 0;
     top: 0;
-    opacity: 0.5 ;
-    box-shadow:0 0 2px 2px;
+    opacity: 0.5;
+    box-shadow: 0 0 2px 2px;
     border: 1px solid #f2f2f2;
 }
-.item:nth-child(1){
+
+.item:nth-child(1) {
     background: #007aff;
     transform: translateX(50px) rotateY(90deg);
 }
-.item:nth-child(2){
+
+.item:nth-child(2) {
     background: #00f4ff;
     transform: translateX(-50px) rotatey(90deg);
 }
-.item:nth-child(3){
+
+.item:nth-child(3) {
     background: #f4bc51;
     transform: translateY(50px) rotatex(90deg);
 }
-.item:nth-child(4){
+
+.item:nth-child(4) {
     background: #f44c51;
     transform: translatey(-50px) rotatex(90deg);
 }
-.item:nth-child(5){
+
+.item:nth-child(5) {
     background: #000000;
     transform: translatez(50px);
 }
-.item:nth-child(6){
+
+.item:nth-child(6) {
     background: #ffffff;
     transform: translatez(-50px);
 }
 
+.box2 {
+    width: 33%;
+    height: 400px;
+    margin-top: 6px;
+    background: #81cee8;
+    padding-top: 150px;
+    overflow: hidden;
+}
 
+.float {
+    width: 30%;
+    height: 40px;
+    background: white;
+    border-radius: 25px;
+    position: relative;
+    transform: translateX(-100%);
+}
+
+.box2:hover .float:nth-child(1) {
+    animation: piao 10s linear infinite;
+}
+
+.float:nth-child(2) {
+    width: 30%;
+    height: 40px;
+    background: white;
+    border-radius: 25px;
+    position: relative;
+}
+.box2:hover .float:nth-child(2) {
+    animation: piao 8s linear infinite;
+}
+.float:nth-child(3) {
+    width: 20%;
+    height: 30px;
+    background: white;
+    border-radius: 25px;
+    position: relative;
+}
+.box2:hover .float:nth-child(3) {
+    animation: piao 15s linear infinite;
+}
+.float:before {
+    content: "";
+    width: 40%;
+    height: 30px;
+    position: absolute;
+    left: 20%;
+    top: -30%;
+    background: white;
+    border-radius: 50%;
+}
+
+.add {
+    width: 50%;
+    height: 30px;
+    position: absolute;
+    left: 30%;
+    bottom: -30%;
+    background: white;
+    border-radius: 50%;
+}
+
+.float:after {
+    content: "";
+    width: 40%;
+    height: 30px;
+    position: absolute;
+    left: 50%;
+    top: -20%;
+    background: white;
+    border-radius: 50%;
+}
+
+.box3 {
+    width: 33%;
+    height: 400px;
+    margin-top: 6px;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+@keyframes piao {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(500%);
+    }
+}
+
+.pic {
+    width: 33%;
+    height: 33.333333%;
+    background: url("https://hsdboy.github.io/angel/img/img1.jpg") no-repeat center center/100% auto;
+}
+
+.pic:nth-child(1) .color {
+    width: 100%;
+    height: 100%;
+    background: #45b45a;
+}
+
+.pic:nth-child(2) .color {
+    width: 100%;
+    height: 100%;
+    background: #b4711d;
+}
+
+.pic:nth-child(3) .color {
+    width: 100%;
+    height: 100%;
+    background: #b46aa8;
+}
+
+.pic:nth-child(4) .color {
+    width: 100%;
+    height: 100%;
+    background: #4c2bb4;
+}
+
+.pic:nth-child(5) .color {
+    width: 100%;
+    height: 100%;
+    background: #206fb4;
+}
+
+.pic:nth-child(6) .color {
+    width: 100%;
+    height: 100%;
+    background: #15b484;
+}
+
+.pic:nth-child(7) .color {
+    width: 100%;
+    height: 100%;
+    background: #b4b241;
+}
+
+.pic:nth-child(8) .color {
+    width: 100%;
+    height: 100%;
+    background: #8187b4;
+}
+
+.pic:nth-child(9) .color {
+    width: 100%;
+    height: 100%;
+    background: #6eb4b2;
+}
+
+.pic:hover .color {
+    opacity: 0;
+    transform: rotateY(180deg);
+}
+audio{
+    display: block;
+    height: 40px;
+    position: fixed;
+    right: -280px;
+    top: 50px;
+    opacity: 0.5;
+    transition: all 1s;
+}
+audio:hover{
+    position: fixed;
+    right: 0;
+}
 
 @media (max-width: 500px) {
     .first {
@@ -516,9 +694,19 @@ li {
         height: 550px;
         margin-top: 6px;
     }
-.box{
-    width: 100%;
-}
+
+    .box {
+        width: 100%;
+    }
+
+    .box2 {
+        width: 100%;
+    }
+
+    .box3 {
+        width: 100%;
+    }
+
     .back {
         width: 100%;
     }
