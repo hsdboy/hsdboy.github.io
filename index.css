@@ -570,7 +570,6 @@ audio:hover {
 
 @media (max-width: 500px) {
     .all{
-        margin: 0 6px;
     }
     .first {
         width: 100%;
