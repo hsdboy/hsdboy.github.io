@@ -54,35 +54,27 @@ li {
 
 .black{
     position: fixed;
+    z-index: 100;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background: url("images/timg.jpg") center center/cover;
-    z-index: -100;
-    display: flex;
-    flex-flow: wrap;
-    opacity: 0;
-    transition: all 1s;
+   /* display: none;*/
 }
-.black2{
-    z-index: -100;
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    flex-flow: wrap;
+
+.block{
+    width: 10%;
+    height: 10%;
+    background: #45b45a;
+    float: left;
+    vertical-align: center;
+    text-align: center;
 }
-.black2item{
-    width: 9.99999%;
-    height: 9.999999%;
-    background: yellow;
-    transition: all 1s;
-    opacity: 1;
+.show{
+    background: red;
+}
+.back{
+    background: rgb(255, 255, 255);
 }
 .red{
     width: 30px;
@@ -433,22 +425,25 @@ li {
     height: 400px;
     margin-top: 6px;
     background: #81cee8;
-    overflow: hidden;
+    /*overflow: hidden;*/
+    position: relative;
 }
 
-.float {
+.floa {
     width: 30%;
     height: 40px;
     background: white;
     border-radius: 25px;
-    position: relative;
+    position: absolute;
+    top:0;
+    left: 0;
 }
 
 /*.box2:hover .float:nth-child(1) {
     animation: piao 10s linear infinite;
 }*/
 
-.float:nth-child(2) {
+.floa:nth-child(2) {
     width: 30%;
     height: 40px;
     background: white;
@@ -459,7 +454,7 @@ li {
     animation: piao 8s linear infinite;
 }*/
 
-.float:nth-child(3) {
+.floa:nth-child(3) {
     width: 20%;
     height: 30px;
     background: white;
@@ -472,7 +467,7 @@ li {
 }
 */
 
-.float:before {
+.floa:before {
     content: "";
     width: 40%;
     height: 30px;
@@ -493,7 +488,7 @@ li {
     border-radius: 50%;
 }
 
-.float:after {
+.floa:after {
     content: "";
     width: 40%;
     height: 30px;
@@ -651,8 +646,8 @@ li {
     display: flex;
 }
 .bit{
-    background: rgba(255, 255, 0, 0.68);
-    width: 5px;
+    background: rgb(255, 251, 255);
+    border-right: 20px red dashed;
     height: 100%;
     position: absolute;
     right: 20%;
