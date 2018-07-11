@@ -1,87 +1,6 @@
 let i = 1;
 
 {
-    $(".red").on("click", function () {
-
-            if (i % 2 === 0) {
-                $(".black").css("display", "none")
-
-            }
-            else if (i % 2 === 1) {
-                $(".black").css("display", "block");
-
-            }
-            i++;
-        }
-    )
-    let cons = 10;
-    do {
-        $(".black").empty()
-        for (let i = 0; i < 10; i++) {
-            for (let j = 0; j < 10; j++) {
-                let isbomb = Math.random() > 0.9
-                $("<div>")
-                    .attr("id", i + "-" + j)
-                    .addClass(function () {
-                        return "block " + (isbomb ? "bomb" : "")
-                    })
-                    .appendTo($(".black"))
-
-            }
-        }
-    } while ($(".bomb").length != cons)
-
-    $(".black").on("click", ".block", clickhead);
-    $(".black").on("contextmenu", ".block:not(.number)", rightclick);
-
-    function rightclick(e) {
-        e.preventDefault();
-        $(this).toggleClass("flag")
-        if ($(".bomb").filter(".flag").length === cons) {
-            alert("finish")
-        }
-    }
-
-    function clickhead() {
-        if ($(this).hasClass("bomb")) {
-            $(".bomb").addClass("show")
-            alert("game over")
-            return;
-        }
-        if ($(this).hasClass("number")) {
-            return;
-        }
-        if ($(this).hasClass("flag")) {
-            return;
-        }
-        $(this).addClass("number")
-        let n = 0;
-        let id = $(this).attr("id");
-        let x = parseInt(id.charAt(0))
-        let y = parseInt(id.charAt(2))
-        for (let i = x - 1; i <= x + 1; i++) {
-            for (let j = y - 1; j <= y + 1; j++) {
-                if ($("#" + i + "-" + j).hasClass("bomb")) {
-                    n++;
-                }
-            }
-        }
-        $(this).html(n).addClass("back")
-        if (n === 0) {
-            for (let i = x - 1; i <= x + 1; i++) {
-                for (let j = y - 1; j <= y + 1; j++) {
-                    let obj = $("#" + i + "-" + j);
-                    if (!obj.hasClass("number") && obj.length === 1) {
-                        clickhead.call(obj[0]);
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-{
     let floa = document.querySelectorAll(".float");
     let box2 = document.querySelector(".box2");
     let widthbox2 = box2.offsetWidth;
@@ -145,4 +64,41 @@ let i = 1;
         i++;
     };
 
+}
+{
+    let clock = document.querySelector(".clock");
+    for (let i = 0; i < 60; i++) {
+        let point = document.createElement("div");
+        point.style.cssText = `width:2px;height:${i % 5 === 0 ? 14 : 7}px;background:#000;
+    transform:rotate(${i * 6}deg);position:absolute;left:98.5px;top:1px;transform-origin:2px 98px`;
+        clock.appendChild(point);
+    }
+
+    let hours = document.createElement("div");
+    hours.style.cssText = `width:6px;height:50px;background:#000;position:absolute;left:97px;top:50px;
+   transform-origin:center bottom;`;
+    clock.appendChild(hours);
+
+    let minutes = document.createElement("div");
+    minutes.style.cssText = `width:4px;height:70px;background:#000;position:absolute;left:98px;top:30px;
+     transform-origin:center bottom;`;
+    clock.appendChild(minutes);
+
+    let seconds = document.createElement("div");
+    seconds.style.cssText = `width:2px;height:90px;background:#000;position:absolute;left:99px;top:30px;
+     transform-origin:center 70px;`;
+    clock.appendChild(seconds);
+
+    function time() {
+        let date = new Date();
+        let hour = date.getHours();
+        let minute = date.getMinutes();
+        let second = date.getSeconds();
+        hours.style.transform = `rotate(${hour * 30 + minute / 2}deg)`;
+        minutes.style.transform = `rotate(${minute * 6}deg)`;
+        seconds.style.transform = `rotate(${second * 6}deg)`
+    }
+
+    time();
+    setInterval(time, 1000);
 }

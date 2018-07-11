@@ -52,33 +52,7 @@ li {
     }
 }
 
-.black{
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    display: none;
-}
 
-.block{
-    width: 10%;
-    height: 10%;
-    background: #45b45a;
-    float: left;
-    vertical-align: center;
-    text-align: center;
-}
-.show{
-    background: red;
-}
-.back{
-    background: rgb(255, 255, 255);
-}
-.flag{
-    background: yellow;
-}
 .red{
     width: 30px;
     height: 30px;
@@ -90,39 +64,7 @@ li {
     z-index: 101;
 }
 
-.black .star{
-    width: 50%;
-    height: 40%;
-    background: black;
-}
-.star:nth-of-type(1){
 
-    animation: shan 1.3s infinite;
-}
-.star:nth-of-type(2){
-    animation: shan 1.15s infinite;
-}
-.star:nth-of-type(3){
-    height: 35%;
-    animation: shan 1s infinite;
-}
-.star:nth-of-type(4){
-    height: 35%;
-     animation: shan 1.4s infinite;
- }
-
-.star:nth-of-type(6){
-    height: 25%;
-    animation: shan 1s infinite;
-}
-.star:nth-of-type(5){
-    height: 25%;
-    animation: shan 1.2s infinite;
-}
-@keyframes shan {
-    from{opacity: 0}
-    to{opacity: 1}
-}
 
 
 
@@ -637,6 +579,23 @@ li {
     width: 20%;
     height: 100%;
 }
+.clock {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    margin: 100px auto;
+    box-shadow: 0 0 5px #000;
+    position: relative;
+}
+.box3-5{
+    width: 33%;
+    height: 400px;
+    margin-top: 6px;
+    background: white;
+    position: relative;
+    display: flex;
+}
 .box4{
     width: 33%;
     height: 400px;
@@ -690,6 +649,9 @@ li {
     }
 
     .box3 {
+        width: 100%;
+    }
+    .box3-5{
         width: 100%;
     }
     .box4 {
