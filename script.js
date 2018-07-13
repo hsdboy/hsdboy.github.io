@@ -1,5 +1,6 @@
 let i = 1;
 
+//云
 {
     let floa = document.querySelectorAll(".float");
     let box2 = document.querySelector(".box2");
@@ -40,6 +41,7 @@ let i = 1;
     }
 }
 
+//歌词
 {
     let audio = document.querySelector("audio");
     let lyric = document.querySelector(".lyric");
@@ -65,40 +67,93 @@ let i = 1;
     };
 
 }
+
+//时钟
 {
-    let clock = document.querySelector(".clock");
-    for (let i = 0; i < 60; i++) {
-        let point = document.createElement("div");
-        point.style.cssText = `width:2px;height:${i % 5 === 0 ? 14 : 7}px;background:#000;
+let clock = document.querySelector(".clock");
+let shadow=document.querySelector(".shadow")
+for (let i = 0; i < 60; i++) {
+    let point = document.createElement("div");
+    let point2= document.createElement("div");
+    point.style.cssText = `width:2px;height:${i % 5 === 0 ? 14 : 7}px;background:#000;
     transform:rotate(${i * 6}deg);position:absolute;left:98.5px;top:1px;transform-origin:2px 98px`;
-        clock.appendChild(point);
-    }
+    point2.style.cssText = `width:2px;height:${i % 5 === 0 ? 14 : 7}px;background:#fff;
+    transform:rotate(${i * 6}deg);position:absolute;left:98.5px;top:1px;transform-origin:2px 98px`;
+    clock.appendChild(point);
+    shadow.appendChild(point2);
+}
 
-    let hours = document.createElement("div");
-    hours.style.cssText = `width:6px;height:50px;background:#000;position:absolute;left:97px;top:50px;
+let hours = document.createElement("div");
+let hours2 = document.createElement("div");
+hours.style.cssText = `width:6px;height:50px;background:#000;position:absolute;left:97px;top:50px;
    transform-origin:center bottom;`;
-    clock.appendChild(hours);
+hours2.style.cssText = `width:6px;height:50px;background:#fff;position:absolute;left:97px;top:50px;
+   transform-origin:center bottom;`;
+clock.appendChild(hours);
+shadow.appendChild(hours2);
 
-    let minutes = document.createElement("div");
-    minutes.style.cssText = `width:4px;height:70px;background:#000;position:absolute;left:98px;top:30px;
+let minutes = document.createElement("div");
+let minutes2 = document.createElement("div");
+minutes.style.cssText = `width:4px;height:70px;background:#000;position:absolute;left:98px;top:30px;
      transform-origin:center bottom;`;
-    clock.appendChild(minutes);
+minutes2.style.cssText = `width:4px;height:70px;background:#fff;position:absolute;left:98px;top:30px;
+     transform-origin:center bottom;`;
+clock.appendChild(minutes);
+shadow.appendChild(minutes2);
 
-    let seconds = document.createElement("div");
-    seconds.style.cssText = `width:2px;height:90px;background:#000;position:absolute;left:99px;top:30px;
+let seconds = document.createElement("div");
+let seconds2 = document.createElement("div");
+seconds.style.cssText = `width:2px;height:90px;background:#000;position:absolute;left:99px;top:30px;
      transform-origin:center 70px;`;
-    clock.appendChild(seconds);
+seconds2.style.cssText = `width:2px;height:90px;background:#fff;position:absolute;left:99px;top:30px;
+     transform-origin:center 70px;`;
+clock.appendChild(seconds);
+shadow.appendChild(seconds2);
 
-    function time() {
-        let date = new Date();
-        let hour = date.getHours();
-        let minute = date.getMinutes();
-        let second = date.getSeconds();
-        hours.style.transform = `rotate(${hour * 30 + minute / 2}deg)`;
-        minutes.style.transform = `rotate(${minute * 6}deg)`;
-        seconds.style.transform = `rotate(${second * 6}deg)`
-    }
+function time() {
+    let date = new Date();
+    let hour = date.getHours();
+    let minute = date.getMinutes();
+    let second = date.getSeconds();
+    hours.style.transform = `rotate(${hour * 30 + minute / 2}deg)`;
+    minutes.style.transform = `rotate(${minute * 6}deg)`;
+    seconds.style.transform = `rotate(${second * 6}deg)`
+}
+function time2() {
+    let date = new Date();
+    let hour = date.getHours();
+    let minute = date.getMinutes();
+    let second = date.getSeconds();
+    hours2.style.transform = `rotate(${hour * 30 + minute / 2}deg)`;
+    minutes2.style.transform = `rotate(${minute * 6}deg)`;
+    seconds2.style.transform = `rotate(${second * 6}deg)`
+}
 
-    time();
-    setInterval(time, 1000);
+time();
+time2();
+setInterval(time, 1000);
+setInterval(time2, 1000);
+
+
+    $(function(){
+        var oldY= null;
+        var oldX= null;
+        var isdown = false;
+        $(".clock").mousedown(function(e){
+            isdown = true;
+            oldY = e.clientY;
+            oldX = e.clientX;
+        });
+        $(".clock").mousemove(function(e){
+            if(isdown){
+                $(".clock").css("transform","rotateX("+(-e.clientY+oldY)+"deg) rotateY("+(e.clientX-oldX)+"deg)");
+                console.log(-(e.clientY-oldY)/2)
+            }
+        });
+        $("html").mouseup(function(e){
+            isdown = false;
+            oldY = null;
+            oldX=null;
+        });
+    });
 }

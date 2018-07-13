@@ -579,15 +579,7 @@ li {
     width: 20%;
     height: 100%;
 }
-.clock {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 1px solid #000;
-    margin: 100px auto;
-    box-shadow: 0 0 5px #000;
-    position: relative;
-}
+
 .box3-5{
     width: 33%;
     height: 400px;
@@ -595,6 +587,41 @@ li {
     background: white;
     position: relative;
     display: flex;
+}
+.clock {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    margin: 100px auto;
+    box-shadow: 0 0 5px #000;
+    transform-style: preserve-3d;
+    background: rgba(255, 255, 255, 0.88);
+    transform: rotateX(20deg) rotateY(-20deg);
+    transition: all 1s;
+}
+
+.shadow {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(16, 16, 16, 0.67);
+    transform-origin: center bottom;
+    transform: rotateX(59deg) rotatey(7deg);
+}
+
+.gun {
+    width: 100px;
+    height: 5px;
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    background: rgba(9, 16, 1, 0.67);
+    transform-origin: left center;
+    transform: rotatey(88deg) rotatez(22deg);
 }
 .box4{
     width: 33%;
@@ -626,6 +653,165 @@ li {
         transform: translateY(-1800px);
     }
 }
+
+
+.box5{
+    width: 33%;
+    height: 400px;
+    margin-top: 6px;
+    position: relative;
+    display: flex;
+    background: url("back.jpg") no-repeat center center /cover;
+    color: #192314;
+}
+
+.box5 .head {
+    width: 90%;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    background: rgba(28, 78, 110, 0.03);
+    display: none;
+    position:absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+
+    margin: auto;
+}
+.box5-1 {
+    width: 350px;
+    height: 350px;
+    display: none;
+    position:absolute;
+    left: 0;
+    top: 30px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.box5 .block {
+    width: 35px;
+    height: 35px;
+    background: rgba(91, 129, 150, 0.67);
+    box-shadow: 0 0 0 1px #05671a;
+    border-radius: 2px;
+    float: left;
+    text-align: center;
+    line-height: 35px;
+}
+
+ .box5 .block:not(.number):not(.flag):hover {
+    background: rgba(83, 124, 142, 0.92);
+}
+
+.box5 .show {
+    background: url("dilei.png");
+    background-size: 100% auto;
+}
+
+ .box5 .back {
+    background: rgba(242, 242, 242, 0.4);
+}
+
+.box5 .flag {
+    background: url("qizi.png");
+    background-size: 100% auto;
+}
+
+.box5 .start {
+    width: 100px;
+    height: 50px;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 50px;
+    background: #f2f2f2;
+    box-shadow: 0 0 10px 5px #6c7880;
+    position:absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+}
+
+.box5 .choose {
+    width: 60%;
+    height: 300px;
+    background: rgba(242, 242, 242, 0.38);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    border-radius: 40px;
+    box-shadow: 0 0 20px 10px #6c7880;
+    bottom: 0;
+    margin: auto;
+    display: none;
+}
+
+.box5 .choose div {
+    font-size: 20px;
+    text-align: center;
+    line-height: 35px;
+    border-bottom: #6c7880 1px solid;
+    cursor: pointer;
+}
+
+.box5 .choose div:hover {
+    background: rgba(108, 120, 128, 0.44);
+}
+
+.box5 .end {
+    width: 80%;
+    height: 250px;
+    background: rgba(242, 242, 242, 0.58);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;
+    border-radius: 40px;
+    box-shadow: 0 0 20px 10px #6c7880;
+}
+
+.box5 .end div {
+    width: 100%;
+    height: 30%;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+}
+.box5 .three{
+    display: flex;
+
+}
+.box5 .case {
+    color: red;
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 500px) {
     .all{
     }
@@ -655,6 +841,9 @@ li {
         width: 100%;
     }
     .box4 {
+        width: 100%;
+    }
+    .box5{
         width: 100%;
     }
 }
