@@ -162,20 +162,30 @@ let i = 1;
     let line = document.querySelector(".bottom")
     line.onmousedown = function () {
         let flag = false;
-        line.onmouseover = function () {
+      /*  line.onmouseenter = function () {*/
             flag = true;
             setTimeout(function () {
                 if (flag) {
                     line.classList.add("lineheight")
-                    line.innerHTML = "Here is my secret area"
+                    line.innerHTML = "This is my projects     <div class=\"project\">\n" +
+                        "            <div>\n" +
+                        "            <a href=\"http://hsdboy.github.io/game.boom\">BOOM</a>\n" +
+                        "            </div>\n" +
+                        "            <div>\n" +
+                        "            <a href=\"http://hsdboy.github.io/game.bird\">BIRD</a></div>\n" +
+                        "                <div>\n" +
+                        "            <a href=\"http://hsdboy.github.io/game.food\">FOOD</a></div>\n" +
+                        "                <div>\n" +
+                        "            <a href=\"http://hsdboy.github.io/game.floor\">FLOOR</a></div>\n" +
+                        "        </div>"
                 }
             }, 2000)
 
-            line.onmouseleave = function () {
+     /*       line.onmouseleave = function () {
                 flag = false;
                 line.classList.remove("lineheight")
             }
-        }
+        }*/
     }
 
 }
